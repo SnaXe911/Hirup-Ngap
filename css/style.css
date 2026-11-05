@@ -1,0 +1,181 @@
+/* Base Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #eee4d8;
+    --maroon: #712b3c;
+    --dark-brown: #5c3a21;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Dark background outside the phone to make it stand out on desktop */
+    background-color: #222; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Simulated Phone Container */
+.app-container {
+    width: 100%;
+    max-width: 390px; 
+    height: 844px; 
+    max-height: 100vh;
+    background-color: var(--bg-color);
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 15px 15px 0 15px; /* Removed bottom padding so the nav sits flush */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    border-radius: 35px; 
+}
+
+/* Hide scrollbar for a cleaner app look */
+.app-container::-webkit-scrollbar {
+    display: none;
+}
+.app-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Header */
+.header-section {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.main-img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Typography */
+.page-title {
+    color: var(--maroon);
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* Card Grid Layout */
+.cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 30px; /* Adds space so the last card doesn't hide behind the nav */
+}
+
+.location-card {
+    background-color: var(--maroon);
+    color: var(--white);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(113, 43, 60, 0.2);
+}
+
+.centered-card {
+    margin: 0;
+    width: 100%;
+}
+
+/* Card Content Styling */
+.card-content {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.card-content h2 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.contact-block {
+    font-size: 0.8rem;
+    line-height: 1.3;
+}
+
+.contact-title {
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.contact-block p {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.phone {
+    font-weight: 400;
+    font-size: 0.75rem;
+}
+
+.card-thumbnail {
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.card-thumbnail img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Bottom Navigation (Sticky to follow scrolling) */
+.bottom-nav {
+    position: sticky;
+    bottom: 0;
+    width: calc(100% + 30px); /* Stretches to fill the container despite padding */
+    margin-left: -15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0 25px 0;
+    background-color: var(--bg-color);
+    border-radius: 0 0 35px 35px;
+    z-index: 100; /* Ensures it stays on top of the cards */
+    box-shadow: 0 -10px 15px rgba(238, 228, 216, 0.9); /* Adds a soft fade effect above it */
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: var(--maroon);
+}
+
+.icon-wrapper {
+    background-color: var(--dark-brown);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+}
+
+.nav-btn span {
+    font-weight: 700;
+    font-size: 0.85rem;
+}

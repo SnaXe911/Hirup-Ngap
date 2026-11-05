@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Guide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Navigation Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Main Header Map (UiTM Alor Gajah) -->
+        <header class="header-section">
+            <iframe 
+                src="https://maps.google.com/maps?q=UiTM%20Alor%20Gajah,%20Melaka&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                class="main-img" 
+                height="250" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </header>
+
+        <!-- Page Title -->
+        <h1 class="page-title">LOCATION</h1>
+
+        <!-- Location Cards Grid -->
+        <main class="cards-grid">
+            <!-- Card 1 -->
+            <article class="location-card">
+                <div class="card-content">
+                    <h2>Kolej Tun Sabariah</h2>
+                    <div class="contact-block">
+                        <p class="contact-title">Contact</p>
+                        <p>Balqis<br><span class="phone">• 011-6509-2070</span></p>
+                        <p>Nurul Izzah<br><span class="phone">• 011-6564-2996</span></p>
+                    </div>
+                </div>
+                <div class="card-thumbnail">
+                    <img src="image/sabby.jpeg" alt="Kolej Tun Sabariah Building">
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="location-card">
+                <div class="card-content">
+                    <h2>Kolej Tun Merah</h2>
+                    <div class="contact-block">
+                        <p class="contact-title">Contact</p>
+                        <p>Farisha<br><span class="phone">• 012-395-6252</span></p>
+                        <p>Jasmin<br><span class="phone">• 018-358-4012</span></p>
+                    </div>
+                </div>
+                <div class="card-thumbnail">
+                    <img src="image/merah.jpeg" alt="Kolej Tun Merah Building">
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="location-card">
+                <div class="card-content">
+                    <h2>Kolej Tun Kudu</h2>
+                    <div class="contact-block">
+                        <p class="contact-title">Contact</p>
+                        <p>Nazmie<br><span class="phone">• 011-1757-4930</span></p>
+                    </div>
+                </div>
+                <div class="card-thumbnail">
+                    <img src="image/kudu.jpeg" alt="Kolej Tun Kudu Building">
+                </div>
+            </article>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-btn" onclick="handleNavigation('menu')">
+                <div class="icon-wrapper"><i class="fa-solid fa-border-all"></i></div>
+                <span>Menu</span>
+            </button>
+            <button class="nav-btn" onclick="handleNavigation('home')">
+                <div class="icon-wrapper"><i class="fa-solid fa-house"></i></div>
+                <span>Home</span>
+            </button>
+            <button class="nav-btn active" onclick="handleNavigation('location')">
+                <div class="icon-wrapper"><i class="fa-solid fa-location-dot"></i></div>
+                <span>Location</span>
+            </button>
+        </nav>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
