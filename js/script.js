@@ -1,27 +1,28 @@
-// Handles user clicks on the bottom navigation icons
-function handleNavigation(tabName) {
-    console.log(`Navigating to: ${tabName}`);
-    
-    // Grab all navigation buttons
-    const navButtons = document.querySelectorAll('.nav-btn');
-    
-    // Reset opacity on all buttons to simulate deselecting
-    navButtons.forEach(btn => {
-        btn.style.opacity = '0.6';
-    });
+let currentSlide = 0;
 
-    // Highlight the clicked button
-    const activeBtn = event.currentTarget;
-    activeBtn.style.opacity = '1';
+function startSlideshow() {
+    const track = document.querySelector('.slideshow-track');
+    let slides = document.querySelectorAll('.slide');
+    
+    if (!track || slides.length === 0) return;
 
-    // Placeholder for actual page routing logic
-    // window.location.href = `/${tabName}.html`;
+    const firstClone = slides[0].cloneNode(true);
+    track.appendChild(firstClone);
+    slides = document.querySelectorAll('.slide');
+
+    setInterval(() => {
+        currentSlide++;
+        track.style.transition = 'transform 0.6s ease-in-out';
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        if (currentSlide === slides.length - 1) {
+            setTimeout(() => {
+                track.style.transition = 'none'; 
+                currentSlide = 0;
+                track.style.transform = `translateX(0)`;
+            }, 600); 
+        }
+    }, 3000);
 }
 
-// Initialize active state on load
-document.addEventListener('DOMContentLoaded', () => {
-    const activeNav = document.querySelector('.nav-btn.active');
-    if(activeNav) {
-        handleNavigation('location');
-    }
-});
+document.addEventListener('DOMContentLoaded', startSlideshow);

@@ -1,95 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Location Guide</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- FontAwesome for Navigation Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Ngap &amp; Hirup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800;900&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="app-container">
-        <!-- Main Header Map (UiTM Alor Gajah) -->
-        <header class="header-section">
-            <iframe 
-                src="https://maps.google.com/maps?q=UiTM%20Alor%20Gajah,%20Melaka&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                class="main-img" 
-                height="250" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </header>
 
-        <!-- Page Title -->
-        <h1 class="page-title">LOCATION</h1>
+  <div class="carousel-wrapper" id="carousel">
 
-        <!-- Location Cards Grid -->
-        <main class="cards-grid">
-            <!-- Card 1 -->
-            <article class="location-card">
-                <div class="card-content">
-                    <h2>Kolej Tun Sabariah</h2>
-                    <div class="contact-block">
-                        <p class="contact-title">Contact</p>
-                        <p>Balqis<br><span class="phone">• 011-6509-2070</span></p>
-                        <p>Nurul Izzah<br><span class="phone">• 011-6564-2996</span></p>
-                    </div>
-                </div>
-                <div class="card-thumbnail">
-                    <img src="image/sabby.jpeg" alt="Kolej Tun Sabariah Building">
-                </div>
-            </article>
+    <div class="carousel-track" id="track">
 
-            <!-- Card 2 -->
-            <article class="location-card">
-                <div class="card-content">
-                    <h2>Kolej Tun Merah</h2>
-                    <div class="contact-block">
-                        <p class="contact-title">Contact</p>
-                        <p>Farisha<br><span class="phone">• 012-395-6252</span></p>
-                        <p>Jasmin<br><span class="phone">• 018-358-4012</span></p>
-                    </div>
-                </div>
-                <div class="card-thumbnail">
-                    <img src="image/merah.jpeg" alt="Kolej Tun Merah Building">
-                </div>
-            </article>
+      <!-- SLIDE 1: SPICY NGAP -->
+      <section class="slide active">
+        <div class="title-group">
+          <span class="title-word">SPICY</span>
+          <span class="title-word">NGAP</span>
+        </div>
+        <div class="main-image-container">
+          <img src="img home/RAMEN CARBONARA.png" alt="Spicy Ramen Bowl">
+        </div>
 
-            <!-- Card 3 -->
-            <article class="location-card">
-                <div class="card-content">
-                    <h2>Kolej Tun Kudu</h2>
-                    <div class="contact-block">
-                        <p class="contact-title">Contact</p>
-                        <p>Nazmie<br><span class="phone">• 011-1757-4930</span></p>
-                    </div>
-                </div>
-                <div class="card-thumbnail">
-                    <img src="image/kudu.jpeg" alt="Kolej Tun Kudu Building">
-                </div>
-            </article>
-        </main>
+        <img class="decor-item chili-1" src="img home/3b6d1601d26d197c1bd742f06aeb7d2b-removebg-preview.png" alt="Chili Top Left">
+        <img class="decor-item chili-2" src="img home/923187c57b7c8dea98fc00b5d7a0eb13-removebg-preview.png" alt="Chili Top Right">
+        <img class="decor-item chili-3" src="img home/75b041db3dc626a49eda15c523868b74-removebg-preview.png" alt="Chili Bottom Left">
+        <img class="decor-item chili-4" src="img home/13a04a4ef39e5427008abeb525b9734f-removebg-preview.png" alt="Chili Bottom Right">
 
-        <!-- Bottom Navigation -->
-        <nav class="bottom-nav">
-            <button class="nav-btn" onclick="handleNavigation('menu')">
-                <div class="icon-wrapper"><i class="fa-solid fa-border-all"></i></div>
-                <span>Menu</span>
-            </button>
-            <button class="nav-btn" onclick="handleNavigation('home')">
-                <div class="icon-wrapper"><i class="fa-solid fa-house"></i></div>
-                <span>Home</span>
-            </button>
-            <button class="nav-btn active" onclick="handleNavigation('location')">
-                <div class="icon-wrapper"><i class="fa-solid fa-location-dot"></i></div>
-                <span>Location</span>
-            </button>
-        </nav>
+        <a href="about us.html" class="see-more-btn">see more</a>
+      </section>
+
+      <!-- SLIDE 2: HIRUP BERRY -->
+      <section class="slide">
+        <div class="title-group">
+          <span class="title-word">HIRUP</span>
+          <span class="title-word">BERRY</span>
+        </div>
+        <div class="main-image-container">
+          <img src="img home/AIR berry.png" alt="Berry Drink">
+        </div>
+
+        <img class="decor-item berry-1" src="img home/BLUEBERRY(1).png" alt="Blueberry">
+        <img class="decor-item berry-2" src="img home/BLUEBERRY(1).png" alt="Blueberry">
+        <img class="decor-item berry-3" src="img home/BLUEBERRY(1).png" alt="Blueberry">
+        <img class="decor-item berry-4" src="img home/BLUEBERRY(1).png" alt="Blueberry">
+        <img class="decor-item berry-5" src="img home/BLUEBERRY(1).png" alt="Blueberry">
+
+        <a href="about us.html" class="see-more-btn">see more</a>
+      </section>
+
+      <!-- SLIDE 3: HIRUP PEACH -->
+      <section class="slide">
+        <div class="title-group">
+          <span class="title-word">HIRUP</span>
+          <span class="title-word">PEACH</span>
+        </div>
+        <div class="main-image-container">
+          <img src="img home/AIR peach.png" alt="Peach Drink">
+        </div>
+
+        <img class="decor-item peach-1" src="img home/25c45f5ea2036fd3ec9a0c25725b2d81-removebg-preview.png" alt="Peach">
+        <img class="decor-item peach-2" src="img home/3fe62bd265b0e8c60bc217a7c152673f-removebg-preview (1).png" alt="Peach">
+        <img class="decor-item peach-3" src="img home/PEACH.jpg-removebg-preview.png" alt="Peach">
+        <img class="decor-item peach-4" src="img home/3fe62bd265b0e8c60bc217a7c152673f-removebg-preview (1).png" alt="Peach">
+        <img class="decor-item peach-5" src="img home/PEACH.jpg-removebg-preview.png" alt="Peach">
+
+        <a href="about us.html" class="see-more-btn">see more</a>
+      </section>
+
     </div>
-    
-    <script src="js/script.js"></script>
+
+    <!-- Indicator Titik Bawah -->
+    <div class="indicators" id="indicators">
+      <div class="dot active" data-index="0"></div>
+      <div class="dot" data-index="1"></div>
+      <div class="dot" data-index="2"></div>
+    </div>
+
+  </div>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+    let isExiting = false;
+    let autoSlideInterval;
+
+    function updateSlide() {
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('active', idx === currentIndex);
+      });
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentIndex);
+      });
+    }
+
+    function goToNext() {
+      if (isExiting) return;
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlide();
+    }
+
+    function goToPrev() {
+      if (isExiting) return;
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    }
+
+    function startAutoSlide() {
+      if (isExiting) return;
+      stopAutoSlide();
+      autoSlideInterval = setInterval(() => {
+        goToNext();
+      }, 3500);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(autoSlideInterval);
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        if (isExiting) return;
+        stopAutoSlide();
+        currentIndex = parseInt(e.target.dataset.index);
+        updateSlide();
+        startAutoSlide();
+      });
+    });
+
+    carousel.addEventListener('pointerdown', (e) => {
+      if (isExiting || e.target.closest('.see-more-btn') || e.target.closest('.dot')) return;
+
+      stopAutoSlide();
+      isDragging = true;
+      startX = e.clientX;
+      currentX = startX;
+
+      try {
+        carousel.setPointerCapture(e.pointerId);
+      } catch (err) {}
+    });
+
+    carousel.addEventListener('pointermove', (e) => {
+      if (!isDragging || isExiting) return;
+      currentX = e.clientX;
+    });
+
+    function handlePointerUp(e) {
+      if (!isDragging) return;
+      isDragging = false;
+
+      try {
+        carousel.releasePointerCapture(e.pointerId);
+      } catch (err) {}
+
+      if (isExiting) return;
+
+      const diff = currentX - startX;
+
+      if (diff < -30) {
+        goToNext();
+      } else if (diff > 30) {
+        goToPrev();
+      }
+
+      startAutoSlide();
+    }
+
+    carousel.addEventListener('pointerup', handlePointerUp);
+    carousel.addEventListener('pointercancel', handlePointerUp);
+    carousel.addEventListener('dragstart', (e) => e.preventDefault());
+
+    window.addEventListener('keydown', (e) => {
+      if (isExiting) return;
+      if (e.key === 'ArrowRight') {
+        stopAutoSlide();
+        goToNext();
+        startAutoSlide();
+      }
+      if (e.key === 'ArrowLeft') {
+        stopAutoSlide();
+        goToPrev();
+        startAutoSlide();
+      }
+    });
+
+    document.querySelectorAll('.see-more-btn').forEach((btn) => {
+      btn.addEventListener('click', function (e) {
+        const targetUrl = this.getAttribute('href');
+        if (targetUrl && targetUrl !== '#') {
+          e.preventDefault();
+        }
+
+        if (isExiting) return;
+        isExiting = true;
+        stopAutoSlide();
+
+        carousel.classList.add('is-exiting');
+        const activeSlide = this.closest('.slide') || document.querySelector('.slide.active');
+        if (activeSlide) {
+          activeSlide.classList.add('exit-up');
+        }
+
+        if (targetUrl && targetUrl !== '#') {
+          setTimeout(() => {
+            window.location.href = targetUrl;
+          }, 1800);
+        }
+      });
+    });
+
+    window.addEventListener('pageshow', () => {
+      isExiting = false;
+      carousel.classList.remove('is-exiting');
+      slides.forEach((slide) => slide.classList.remove('exit-up'));
+      startAutoSlide();
+    });
+
+    startAutoSlide();
+  </script>
 </body>
 </html>
