@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Hirup & Ngap - Mobile Menu</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&family=Pacifico&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandMaroon: '#52202E',
+                        brandMaroonCard: '#612535',
+                        brandBrownCard: '#4B261D',
+                        brandBeige: '#ECE2D0',
+                        brandCream: '#F6EFE5',
+                    },
+                    fontFamily: {
+                        logo: ['Pacifico', 'cursive'],
+                        hand: ['Caveat', 'cursive'],
+                        heading: ['Fredoka', 'sans-serif'],
+                        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body select-none">
+
+    <!-- STRICT PHONE LAYOUT CONTAINER -->
+    <div class="app-container">
+
+       <!-- ================= TOP SECTION (STATIC BANNER IMAGE) ================= -->
+        <div class="w-full bg-brandMaroon relative z-20 pointer-events-none select-none shrink-0">
+            <img src="img/banner.png" 
+                 alt="Hirup & Ngap Menu Banner" 
+                 class="w-full h-auto block object-cover" />
+        </div>
+
+        <!-- ================= MIDDLE SECTION (PHONE MENU AREA) ================= -->
+        <div class="bg-brandBeige pt-9 pb-6 px-3.5 flex-1 overflow-y-auto flex flex-col justify-between relative z-10">
+            
+            <!-- 1. OVERVIEW VIEW (3 COMPACT CARDS) -->
+            <div id="overview-view">
+                <div class="text-left mb-12 pl-1 relative z-10 flex justify-between items-center">
+                    <h2 class="text-2xl font-extrabold text-brandMaroon tracking-wider font-heading uppercase">OUR MENU</h2>
+                    <span class="text-[10px] font-bold text-brandMaroon/70 bg-brandCream px-2.5 py-1 rounded-full border border-brandMaroon/15">
+                        Tap photo to zoom
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 items-end mb-5">
+                    
+                    <!-- CARD 1: Samyang Ngap -->
+                    <div onclick="showItem('samyang')" class="relative bg-brandBrownCard text-white rounded-2xl pt-12 pb-4 px-1.5 text-center flex flex-col justify-between items-center shadow-lg h-[215px] active:scale-95 transition-transform duration-200 cursor-pointer">
+                        <div onclick="event.stopPropagation(); openDetailModal('samyang')" class="absolute -top-9 left-1/2 transform -translate-x-1/2 w-[72px] h-[72px] rounded-full border-[3px] border-brandBeige shadow-xl overflow-hidden bg-brandCream cursor-zoom-in z-20 flex items-center justify-center">
+                            <img src="img/samyang.png" alt="Samyang Ngap" class="w-full h-full object-contain scale-110" onerror="handleImgError(this)" />
+                            <div class="hidden w-full h-full border-2 border-dashed border-brandMaroon/50 flex-col items-center justify-center p-1 text-center bg-brandCream text-brandMaroon">
+                                <i class="fa-solid fa-utensils text-xs"></i>
+                                <span class="text-[8px] font-bold leading-tight mt-0.5">Samyang</span>
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-[11px] leading-snug mt-2 text-brandCream/95">Samyang Ngap with Fried Egg</h3>
+                        <div class="mt-auto"><span class="font-extrabold text-sm text-brandCream tracking-wide">RM8</span></div>
+                    </div>
+
+                    <!-- CARD 2: Hirup Peach Tea Sparkling -->
+                    <div onclick="showItem('peach')" class="relative bg-brandMaroonCard text-white rounded-2xl pt-12 pb-4 px-1.5 text-center flex flex-col justify-between items-center shadow-lg h-[215px] active:scale-95 transition-transform duration-200 cursor-pointer">
+                        <div onclick="event.stopPropagation(); openDetailModal('peach')" class="absolute -top-11 left-1/2 transform -translate-x-1/2 w-[68px] h-[90px] cursor-zoom-in z-20">
+                            <img src="img/peach.png" alt="Hirup Peach Tea Sparkling" class="w-full h-full object-contain filter drop-shadow-lg" onerror="handleImgError(this)" />
+                            <div class="hidden w-full h-full rounded-xl border-2 border-dashed border-brandBeige/60 flex-col items-center justify-center p-1 text-center bg-brandCream text-brandMaroon shadow-md">
+                                <i class="fa-solid fa-wine-glass text-xs"></i>
+                                <span class="text-[8px] font-bold leading-tight mt-0.5">Peach Tea</span>
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-[11px] leading-snug mt-2 text-brandCream/95">Hirup Peach Tea Sparkling</h3>
+                        <div class="mt-auto"><span class="font-extrabold text-sm text-brandCream tracking-wide">RM3</span></div>
+                    </div>
+
+                    <!-- CARD 3: Hirup Berry Sparkling -->
+                    <div onclick="showItem('berry')" class="relative bg-brandBrownCard text-white rounded-2xl pt-12 pb-4 px-1.5 text-center flex flex-col justify-between items-center shadow-lg h-[215px] active:scale-95 transition-transform duration-200 cursor-pointer">
+                        <div onclick="event.stopPropagation(); openDetailModal('berry')" class="absolute -top-11 left-1/2 transform -translate-x-1/2 w-[68px] h-[90px] cursor-zoom-in z-20">
+                            <img src="img/berry.png" alt="Hirup Berry Sparkling" class="w-full h-full object-contain filter drop-shadow-lg" onerror="handleImgError(this)" />
+                            <div class="hidden w-full h-full rounded-xl border-2 border-dashed border-brandBeige/60 flex-col items-center justify-center p-1 text-center bg-brandCream text-brandMaroon shadow-md">
+                                <i class="fa-solid fa-whiskey-glass text-xs"></i>
+                                <span class="text-[8px] font-bold leading-tight mt-0.5">Berry</span>
+                            </div>
+                        </div>
+                        <h3 class="font-bold text-[11px] leading-snug mt-2 text-brandCream/95">Hirup Berry Sparkling</h3>
+                        <div class="mt-auto"><span class="font-extrabold text-sm text-brandCream tracking-wide">RM3</span></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 2. DETAIL VIEW (Inline section when card body is tapped) -->
+            <div id="detail-view" class="hidden mb-4">
+                <div class="flex justify-between items-center mb-3">
+                    <button type="button" onclick="showOverview()" class="flex items-center space-x-1.5 text-brandMaroon font-bold text-xs bg-brandCream/90 px-3 py-1.5 rounded-full border border-brandMaroon/20 active:scale-95 cursor-pointer">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Back to Menu</span>
+                    </button>
+                </div>
+
+                <div class="bg-brandBrownCard text-brandCream rounded-2xl p-4 shadow-xl relative border-2 border-brandMaroon/30">
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-20 h-20 shrink-0 rounded-full border-[3px] border-brandBeige shadow-lg overflow-hidden bg-brandCream relative cursor-zoom-in flex items-center justify-center" onclick="openDetailModal(currentKey)">
+                                <img id="detail-img" src="img/samyang.png" alt="Item Image" class="w-full h-full object-contain" onerror="handleImgError(this)" />
+                                <div class="hidden w-full h-full border-2 border-dashed border-brandMaroon/50 flex-col items-center justify-center p-1 text-center bg-brandCream text-brandMaroon">
+                                    <i id="detail-icon" class="fa-solid fa-bowl-food text-lg mb-0.5"></i>
+                                    <span class="text-[8px] font-bold leading-tight">Zoom</span>
+                                </div>
+                            </div>
+
+                            <div class="flex-1">
+                                <h3 id="detail-title" class="font-heading font-extrabold text-base uppercase text-white tracking-wide leading-tight mb-1">
+                                    SAMYANG NGAP WITH FRIED EGG
+                                </h3>
+                                <div class="flex items-center gap-2">
+                                    <span id="detail-price" class="font-extrabold text-lg text-brandCream bg-brandMaroon px-2.5 py-0.5 rounded-lg">RM8</span>
+                                    <span class="text-[9px] text-brandCream/80 uppercase tracking-wider font-semibold">50 orders/day</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p id="detail-desc" class="text-[11px] text-brandCream/90 leading-relaxed"></p>
+                        
+                        <div class="bg-brandMaroon/40 rounded-xl p-2.5 border border-brandBeige/15">
+                            <h4 class="font-extrabold text-[11px] text-white uppercase tracking-wider mb-1">HIGHLIGHT:</h4>
+                            <ul id="detail-highlights" class="text-[11px] text-brandCream/90 space-y-0.5 list-disc list-inside"></ul>
+                        </div>
+
+                        <p id="detail-footer-tag" class="font-hand text-sm text-brandCream font-bold italic"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Navigation -->
+		<a href="index.html" class="nav-btn">
+        <nav class="bottom-nav">
+            <img src="image/logo.png" alt="Hirup & Ngap Logo" class="nav-logo">
+		<a/>
+            
+            <div class="nav-links">
+                <!-- Menu Icon -->
+                <a href="menu.html" class="nav-btn">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" class="nav-svg">
+                            <rect x="3.5" y="3.5" width="7" height="7" rx="1.2"></rect>
+                            <rect x="13.5" y="3.5" width="7" height="7" rx="1.2"></rect>
+                            <rect x="3.5" y="13.5" width="7" height="7" rx="1.2"></rect>
+                            <rect x="13.5" y="13.5" width="7" height="7" rx="1.2"></rect>
+                        </svg>
+                    </div>
+                    <span>Menu</span>
+                </a>
+
+                <!-- Home Icon -->
+                <a href="about us.html" class="nav-btn">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" class="nav-svg">
+                            <path d="M3 10.5L12 3L21 10.5"></path>
+                            <path d="M5.5 8.5V19.5H18.5V8.5"></path>
+                            <path d="M9.5 19.5V13.5H14.5V19.5"></path>
+                        </svg>
+                    </div>
+                    <span>Home</span>
+                </a>
+
+                <!-- Location Icon -->
+                <a href="location.html" class="nav-btn active">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" class="nav-svg">
+                            <path d="M12 21.5C12 21.5 18.5 14.8 18.5 9.5C18.5 5.91 15.59 3 12 3C8.41 3 5.5 5.91 5.5 9.5C5.5 14.8 12 21.5 12 21.5Z"></path>
+                            <circle cx="12" cy="9.5" r="2.6"></circle>
+                        </svg>
+                    </div>
+                    <span>Location</span>
+                </a>
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- ================= MOBILE BIG ZOOMED PHOTO + FULL DETAIL MODAL ================= -->
+    <div id="detail-modal" style="display: none;" class="fixed inset-0 bg-black/85 z-50 flex items-center justify-center p-3" onclick="closeDetailModal()">
+        <div id="detail-modal-card" class="relative max-w-[380px] w-full bg-brandBrownCard text-brandCream rounded-3xl p-4 shadow-2xl border-[3px] border-brandBeige max-h-[88vh] overflow-y-auto" onclick="event.stopPropagation()">
+            
+            <button type="button" onclick="closeDetailModal()" aria-label="Close popup" class="absolute top-3 right-3 w-9 h-9 bg-brandCream text-brandMaroon rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform z-20 font-bold cursor-pointer">
+                <i class="fa-solid fa-xmark text-base"></i>
+            </button>
+
+            <div class="w-full h-60 rounded-2xl overflow-hidden bg-brandCream shadow-xl border-[3px] border-brandBeige/80 mb-4 flex items-center justify-center relative p-2">
+                <img id="modal-img" src="" alt="Zoomed Menu Item" class="w-full h-full object-contain" onerror="handleModalImgError(this)" />
+                
+                <div id="modal-img-fallback" class="w-full h-full hidden flex-col items-center justify-center text-brandMaroon p-4 text-center">
+                    <i id="modal-fallback-icon" class="fa-solid fa-bowl-food text-4xl mb-2"></i>
+                    <span class="font-bold text-sm">Large Menu Photo Preview</span>
+                    <span id="modal-fallback-src" class="text-[10px] font-mono opacity-75 mt-1">src="img/samyang.png"</span>
+                </div>
+
+                <div id="modal-price-badge" class="absolute bottom-2.5 right-2.5 bg-brandMaroon text-brandCream font-heading font-extrabold text-lg px-3.5 py-1 rounded-full shadow-lg border-2 border-brandBeige">
+                    RM8
+                </div>
+            </div>
+
+            <div>
+                <h3 id="modal-title" class="font-heading font-extrabold text-xl uppercase text-white tracking-wide leading-tight mb-2"></h3>
+                <p id="modal-desc" class="text-xs text-brandCream/95 leading-relaxed mb-3.5"></p>
+
+                <div class="bg-brandMaroon/55 rounded-2xl p-3 border border-brandBeige/20 mb-3">
+                    <h4 class="font-extrabold text-xs text-white uppercase tracking-wider mb-1">HIGHLIGHT:</h4>
+                    <ul id="modal-highlights" class="text-xs text-brandCream/95 space-y-1 list-disc list-inside"></ul>
+                </div>
+
+                <div class="flex flex-col gap-1 pt-0.5">
+                    <p id="modal-footer" class="font-hand text-base text-brandCream font-bold italic"></p>
+                    <span class="text-[9px] text-brandCream/75 uppercase tracking-widest font-semibold">Limited to 50 orders daily!</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
