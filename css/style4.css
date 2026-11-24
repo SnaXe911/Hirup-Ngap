@@ -154,6 +154,39 @@ html, body {
     text-decoration: none;
 }
 
+/* Wrapper for WhatsApp Icon + Building Photo */
+.card-media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.wa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    transition: transform 0.2s ease;
+}
+
+.wa-btn:hover {
+    transform: scale(1.1);
+}
+
+.wa-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-thumbnail {
+    width: 84px;
+    height: 84px;
+    flex-shrink: 0;
+}
+
 .card-thumbnail {
     width: 92px;
     height: 92px;
