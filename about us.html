@@ -2,7 +2,7 @@
 <html lang="ms">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Slurp and Fizz — Buldak &amp; Minuman Bergas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,147 +13,150 @@
   <link rel="stylesheet" href="css/style2.css" />
 </head>
 <body>
-  <main class="page-wrapper">
-    <!-- Kad Utama (Hero Section - Penuh Lebar) -->
-    <section class="hero-card" aria-label="Hidangan Utama Buldak">
-      <div class="hero-visuals">
-        <h1 class="hero-title">BULDAK</h1>
+  <div class="app-container">
+    <main class="content-area">
+      <!-- Kad Utama (Hero Section) -->
+      <section class="hero-card" aria-label="Hidangan Utama Buldak">
+        <div class="hero-visuals">
+          <h1 class="hero-title">BULDAK</h1>
 
-        <svg class="arc arc-left" viewBox="0 0 60 100" fill="none" aria-hidden="true">
-          <path d="M48 6C14 26 14 74 48 94" stroke="#F4ECE4" stroke-width="2.2" stroke-linecap="round" />
-        </svg>
-        <svg class="arc arc-right" viewBox="0 0 60 100" fill="none" aria-hidden="true">
-          <path d="M12 6C46 26 46 74 12 94" stroke="#F4ECE4" stroke-width="2.2" stroke-linecap="round" />
-        </svg>
+          <svg class="arc arc-left" viewBox="0 0 60 100" fill="none" aria-hidden="true">
+            <path d="M48 6C14 26 14 74 48 94" stroke="#F4ECE4" stroke-width="2.2" stroke-linecap="round" />
+          </svg>
+          <svg class="arc arc-right" viewBox="0 0 60 100" fill="none" aria-hidden="true">
+            <path d="M12 6C46 26 46 74 12 94" stroke="#F4ECE4" stroke-width="2.2" stroke-linecap="round" />
+          </svg>
 
-        <img
-          src="img home/AIR peach.png"
-          alt="Minuman Bergas Teh Peach"
-          class="drink-cup drink-peach"
-        />
+          <img
+            src="img home/AIR peach.png"
+            alt="Minuman Bergas Teh Peach"
+            class="drink-cup drink-peach"
+          />
 
-        <img
-          src="img home/AIR berry.png"
-          alt="Minuman Bergas Perisa Beri"
-          class="drink-cup drink-berry"
-        />
+          <img
+            src="img home/AIR berry.png"
+            alt="Minuman Bergas Perisa Beri"
+            class="drink-cup drink-berry"
+          />
 
-        <img
-          src="img home/RAMEN CARBONARA.png"
-          alt="Samyang Carbonara dengan Telur Mata Lembu"
-          class="noodle-bowl"
-        />
+          <img
+            src="img home/RAMEN CARBONARA.png"
+            alt="Samyang Carbonara dengan Telur Mata Lembu"
+            class="noodle-bowl"
+          />
 
-        <img
-          src="img home/8b95003da1b88989e555ea9f1392e9cd-removebg-preview.png"
-          alt="Cili Merah"
-          class="chili chili-large"
-        />
+          <img
+            src="img home/8b95003da1b88989e555ea9f1392e9cd-removebg-preview.png"
+            alt="Cili Merah"
+            class="chili chili-large"
+          />
 
-        <img
-          src="img home/3b6d1601d26d197c1bd742f06aeb7d2b-removebg-preview.png"
-          alt="Cili Kecil"
-          class="chili chili-small"
-        />
-      </div>
-
-      <div class="hero-content">
-        <span class="about-label">About us</span>
-        <p class="about-text">
-          Hirup and Ngap brings you creamy,spicy samyang
-          carbonara with Fried egg
-          and refreshing fizzy drinks in peach tea and Berry
-          flavours.Our goal is to
-          make every campus.
-          break more delicious and
-          enjoyable!
-        </p>
-      </div>
-    </section>
-
-    <!-- Bahagian Tengah: Carousel Auto 8 Gambar dengan Kotak Burgundy Bergerak Bersama -->
-    <section class="showcase-band" aria-label="Galeri Carousel Auto 8 Gambar">
-      <button type="button" class="carousel-arrow prev" id="prevBtn" aria-label="Gambar Sebelumnya">
-        &#10094;
-      </button>
-      <button type="button" class="carousel-arrow next" id="nextBtn" aria-label="Gambar Seterusnya">
-        &#10095;
-      </button>
-
-      <div class="carousel-viewport" id="carouselViewport">
-        <div class="carousel-track" id="carouselTrack">
-          <article class="menu-card">
-            <img src="img home/photo_6336793829855400684_y.jpg" alt="Gambar Menu 1" />
-          </article>
-          <article class="menu-card">
-            <img src="img home/photo_6336793829855400685_y.jpg" alt="Gambar Menu 2" />
-          </article>
-          <article class="menu-card">
-            <img src="img home/photo_6336793829855400686_y.jpg" alt="Gambar Menu 3" />
-          </article>
-          <article class="menu-card">
-            <img src="img home/photo_6336793829855400687_y.jpg" alt="Gambar Menu 4" />
-          </article>
-          <article class="menu-card">
-            <img src="img home/photo_6336793829855400688_y.jpg" alt="Gambar Menu 5" />
-          </article>
-          <article class="menu-card">
-            <img src="img home/photo_6336793829855400689_y.jpg" alt="Gambar Menu 6" />
-          </article>
-          <article class="menu-card">
-            <img src="img home/photo_6336793829855400690_y.jpg" alt="Gambar Menu 7" />
-          </article>
-          <article class="menu-card">
-            <img src="img home/photo_6336793829855400691_y.jpg" alt="Gambar Menu 8" />
-          </article>
+          <img
+            src="img home/3b6d1601d26d197c1bd742f06aeb7d2b-removebg-preview.png"
+            alt="Cili Kecil"
+            class="chili chili-small"
+          />
         </div>
-      </div>
 
-      <div class="carousel-dots" id="carouselDots" aria-label="Penunjuk Slide"></div>
-    </section>
+        <div class="hero-content">
+          <span class="about-label">About us</span>
+          <p class="about-text">
+            Hirup and Ngap brings you creamy,spicy samyang
+            carbonara with Fried egg
+            and refreshing fizzy drinks in peach tea and Berry
+            flavours.Our goal is to
+            make every campus.
+            break more delicious and
+            enjoyable!
+          </p>
+        </div>
+      </section>
 
-    <!-- Bahagian Bawah Penuh Lebar: Logo PNG & Butang Menu, Home, Location -->
-    <footer class="bottom-bar">
-      <a href="index.html" class="brand-logo" aria-label="Slurp and Fizz Utama">
-        <img src="img home/logo.png" alt="Slurp and Fizz Logo" />
-      </a>
-
-      <nav class="icon-nav" aria-label="Navigasi Utama">
-        <button type="button" class="nav-btn" data-tab="menu">
-          <span class="nav-icon-box">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="3" y="3" width="7" height="7" rx="1" />
-              <rect x="14" y="3" width="7" height="7" rx="1" />
-              <rect x="3" y="14" width="7" height="7" rx="1" />
-              <rect x="14" y="14" width="7" height="7" rx="1" />
-            </svg>
-          </span>
-          <span class="nav-label">Menu</span>
+      <!-- Bahagian Tengah: Carousel Auto 8 Gambar dengan Kotak Burgundy Bergerak Bersama -->
+      <section class="showcase-band" aria-label="Galeri Carousel Auto 8 Gambar">
+        <button type="button" class="carousel-arrow prev" id="prevBtn" aria-label="Gambar Sebelumnya">
+          &#10094;
+        </button>
+        <button type="button" class="carousel-arrow next" id="nextBtn" aria-label="Gambar Seterusnya">
+          &#10095;
         </button>
 
-        <a href="index.html" class="nav-btn active" data-tab="home">
-          <span class="nav-icon-box">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 10.5L12 3l9 7.5" />
-              <path d="M5 9.5V20h5v-6h4v6h5V9.5" />
+        <div class="carousel-viewport" id="carouselViewport">
+          <div class="carousel-track" id="carouselTrack">
+            <article class="menu-card">
+              <img src="img home/photo_6336793829855400684_y.jpg" alt="Gambar Menu 1" />
+            </article>
+            <article class="menu-card">
+              <img src="img home/photo_6336793829855400685_y.jpg" alt="Gambar Menu 2" />
+            </article>
+            <article class="menu-card">
+              <img src="img home/photo_6336793829855400686_y.jpg" alt="Gambar Menu 3" />
+            </article>
+            <article class="menu-card">
+              <img src="img home/photo_6336793829855400687_y.jpg" alt="Gambar Menu 4" />
+            </article>
+            <article class="menu-card">
+              <img src="img home/photo_6336793829855400688_y.jpg" alt="Gambar Menu 5" />
+            </article>
+            <article class="menu-card">
+              <img src="img home/photo_6336793829855400689_y.jpg" alt="Gambar Menu 6" />
+            </article>
+            <article class="menu-card">
+              <img src="img home/photo_6336793829855400690_y.jpg" alt="Gambar Menu 7" />
+            </article>
+            <article class="menu-card">
+              <img src="img home/photo_6336793829855400691_y.jpg" alt="Gambar Menu 8" />
+            </article>
+          </div>
+        </div>
+
+        <div class="carousel-dots" id="carouselDots" aria-label="Penunjuk Slide"></div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <img src="image/logo.png" alt="Hirup & Ngap Logo" class="nav-logo">
+      
+      <div class="nav-links">
+        <!-- Menu Icon -->
+        <a href="menu.html" class="nav-btn">
+          <div class="icon-wrapper">
+            <svg viewBox="0 0 24 24" class="nav-svg">
+              <rect x="3.5" y="3.5" width="7" height="7" rx="1.2"></rect>
+              <rect x="13.5" y="3.5" width="7" height="7" rx="1.2"></rect>
+              <rect x="3.5" y="13.5" width="7" height="7" rx="1.2"></rect>
+              <rect x="13.5" y="13.5" width="7" height="7" rx="1.2"></rect>
             </svg>
-          </span>
-          <span class="nav-label">Home</span>
+          </div>
+          <span>Menu</span>
         </a>
 
-        <a href="location.html" class="nav-btn active" data-tab="location">
-          <span class="nav-icon-box">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 21s-6.5-6.2-6.5-11.5a6.5 6.5 0 1 1 13 0C18.5 14.8 12 21 12 21z" />
-              <circle cx="12" cy="9.5" r="2.5" />
+        <!-- Home Icon -->
+        <a href="about us.html" class="nav-btn">
+          <div class="icon-wrapper">
+            <svg viewBox="0 0 24 24" class="nav-svg">
+              <path d="M3 10.5L12 3L21 10.5"></path>
+              <path d="M5.5 8.5V19.5H18.5V8.5"></path>
+              <path d="M9.5 19.5V13.5H14.5V19.5"></path>
             </svg>
-          </span>
-          <span class="nav-label">Location</span>
-		<a/>
-        </button>
-      </nav>
-    </footer>
-  </main>
+          </div>
+          <span>Home</span>
+        </a>
+
+        <!-- Location Icon -->
+        <a href="location.html" class="nav-btn active">
+          <div class="icon-wrapper">
+            <svg viewBox="0 0 24 24" class="nav-svg">
+              <path d="M12 21.5C12 21.5 18.5 14.8 18.5 9.5C18.5 5.91 15.59 3 12 3C8.41 3 5.5 5.91 5.5 9.5C5.5 14.8 12 21.5 12 21.5Z"></path>
+              <circle cx="12" cy="9.5" r="2.6"></circle>
+            </svg>
+          </div>
+          <span>Location</span>
+        </a>
+      </div>
+    </nav>
+  </div>
 
   <script>
     const track = document.getElementById('carouselTrack');

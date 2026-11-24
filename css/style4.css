@@ -205,19 +205,23 @@ html, body {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px 16px calc(12px + env(safe-area-inset-bottom)) 16px;
     background-color: var(--nav-bg);
+    position: relative;
     flex-shrink: 0;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .nav-logo {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 54px;
     height: 54px;
     object-fit: contain;
     mix-blend-mode: multiply;
-    flex-shrink: 0;
 }
 
 .nav-links {
@@ -225,7 +229,6 @@ html, body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    flex: 1;
 }
 
 .nav-btn {
