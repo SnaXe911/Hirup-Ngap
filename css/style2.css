@@ -311,14 +311,14 @@ body {
 }
 
 .nav-logo {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 54px;
-  height: 54px;
-  object-fit: contain;
-  mix-blend-mode: multiply;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
 }
 
 .nav-links {

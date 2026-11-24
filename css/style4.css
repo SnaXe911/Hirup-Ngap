@@ -215,11 +215,11 @@ html, body {
 
 .nav-logo {
     position: absolute;
-    left: 16px;
+    left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    width: 54px;
-    height: 54px;
+    width: 68px;
+    height: 68px;
     object-fit: contain;
     mix-blend-mode: multiply;
 }
