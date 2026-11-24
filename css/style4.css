@@ -213,8 +213,8 @@ html, body {
 }
 
 .nav-logo {
-    width: 44px;
-    height: auto;
+    width: 54px;
+    height: 54px;
     object-fit: contain;
     mix-blend-mode: multiply;
     flex-shrink: 0;
