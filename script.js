@@ -67,37 +67,6 @@ function handleModalImgError(imgEl) {
     fallback.classList.add('flex');
 }
 
-function showItem(key) {
-    currentKey = key;
-    const item = menuData[key];
-    if (!item) return;
-
-    document.getElementById('detail-title').textContent = item.title;
-    document.getElementById('detail-price').textContent = item.price;
-    document.getElementById('detail-desc').textContent = item.desc;
-    document.getElementById('detail-footer-tag').textContent = item.footer;
-
-    const imgEl = document.getElementById('detail-img');
-    imgEl.dataset.retried = '';
-    imgEl.style.display = 'block';
-    imgEl.nextElementSibling.classList.add('hidden');
-    imgEl.nextElementSibling.classList.remove('flex');
-    imgEl.src = item.img;
-    document.getElementById('detail-icon').className = `fa-solid ${item.icon} text-lg mb-0.5`;
-
-    document.getElementById('detail-highlights').innerHTML = item.highlights
-        .map(h => `<li>${h}</li>`)
-        .join('');
-
-    document.getElementById('overview-view').classList.add('hidden');
-    document.getElementById('detail-view').classList.remove('hidden');
-}
-
-function showOverview() {
-    document.getElementById('detail-view').classList.add('hidden');
-    document.getElementById('overview-view').classList.remove('hidden');
-}
-
 function openDetailModal(key) {
     currentKey = key;
     const item = menuData[key];
