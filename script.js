@@ -42,7 +42,6 @@ const menuData = {
     }
 };
 
-// Automatically try .jpg if .png is missing before showing fallback icon
 function handleImgError(imgEl) {
     if (imgEl.src.endsWith('.png') && !imgEl.dataset.retried) {
         imgEl.dataset.retried = 'true';
@@ -68,11 +67,79 @@ function handleModalImgError(imgEl) {
     fallback.classList.add('flex');
 }
 
-// Switch from 3-card overview to inline detail view
 function showItem(key) {
     currentKey = key;
     const item = menuData[key];
     if (!item) return;
 
     document.getElementById('detail-title').textContent = item.title;
-    document.getElementById('detail-price').textContent
+    document.getElementById('detail-price').textContent = item.price;
+    document.getElementById('detail-desc').textContent = item.desc;
+    document.getElementById('detail-footer-tag').textContent = item.footer;
+
+    const imgEl = document.getElementById('detail-img');
+    imgEl.dataset.retried = '';
+    imgEl.style.display = 'block';
+    imgEl.nextElementSibling.classList.add('hidden');
+    imgEl.nextElementSibling.classList.remove('flex');
+    imgEl.src = item.img;
+    document.getElementById('detail-icon').className = `fa-solid ${item.icon} text-lg mb-0.5`;
+
+    document.getElementById('detail-highlights').innerHTML = item.highlights
+        .map(h => `<li>${h}</li>`)
+        .join('');
+
+    document.getElementById('overview-view').classList.add('hidden');
+    document.getElementById('detail-view').classList.remove('hidden');
+}
+
+function showOverview() {
+    document.getElementById('detail-view').classList.add('hidden');
+    document.getElementById('overview-view').classList.remove('hidden');
+}
+
+function openDetailModal(key) {
+    currentKey = key;
+    const item = menuData[key];
+    if (!item) return;
+
+    document.getElementById('modal-title').textContent = item.title;
+    document.getElementById('modal-price-badge').textContent = item.price;
+    document.getElementById('modal-desc').textContent = item.desc;
+    document.getElementById('modal-footer').textContent = item.footer;
+
+    const modalImg = document.getElementById('modal-img');
+    const fallback = document.getElementById('modal-img-fallback');
+    modalImg.dataset.retried = '';
+    modalImg.style.display = 'block';
+    fallback.classList.add('hidden');
+    fallback.classList.remove('flex');
+    modalImg.src = item.img;
+
+    document.getElementById('modal-fallback-icon').className = `fa-solid ${item.icon} text-4xl mb-2`;
+    document.getElementById('modal-fallback-src').textContent = `src="${item.img}"`;
+
+    document.getElementById('modal-highlights').innerHTML = item.highlights
+        .map(h => `<li>${h}</li>`)
+        .join('');
+
+    document.getElementById('detail-modal').style.display = 'flex';
+}
+
+function closeDetailModal() {
+    document.getElementById('detail-modal').style.display = 'none';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeDetailModal();
+    }
+});
+
+const navButtons = document.querySelectorAll('.nav-btn');
+navButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        navButtons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+    });
+});
