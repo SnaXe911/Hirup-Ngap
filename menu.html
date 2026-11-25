@@ -42,29 +42,29 @@
     <!-- STRICT PHONE LAYOUT CONTAINER -->
     <div class="app-container">
 
-        <!-- ================= TOP SECTION (STATIC BANNER IMAGE) ================= -->
+       <!-- ================= TOP SECTION (STATIC BANNER IMAGE) ================= -->
         <div class="w-full bg-brandMaroon relative z-20 pointer-events-none select-none shrink-0">
             <img src="img/banner.png" 
                  alt="Hirup & Ngap Menu Banner" 
                  class="w-full h-auto block object-cover" />
         </div>
 
-        <!-- ================= MIDDLE SECTION (SCROLLABLE CONTENT AREA) ================= -->
-        <div class="content-area bg-brandBeige flex flex-col justify-between relative z-10">
+        <!-- ================= MIDDLE SECTION (PHONE MENU AREA) ================= -->
+        <div class="bg-brandBeige pt-9 pb-6 px-3.5 flex-1 overflow-y-auto flex flex-col justify-between relative z-10">
             
             <!-- 1. OVERVIEW VIEW (3 COMPACT CARDS) -->
             <div id="overview-view">
-                <div class="text-left mb-10 pl-1 relative z-10 flex justify-between items-center">
+                <div class="text-left mb-12 pl-1 relative z-10 flex justify-between items-center">
                     <h2 class="text-2xl font-extrabold text-brandMaroon tracking-wider font-heading uppercase">OUR MENU</h2>
                     <span class="text-[10px] font-bold text-brandMaroon/70 bg-brandCream px-2.5 py-1 rounded-full border border-brandMaroon/15">
                         Tap photo to zoom
                     </span>
                 </div>
 
-                <div class="grid grid-cols-3 gap-2 items-end mb-2">
+                <div class="grid grid-cols-3 gap-2 items-end mb-5">
                     
                     <!-- CARD 1: Samyang Ngap -->
-                    <div onclick="showItem('samyang')" class="relative bg-brandBrownCard text-white rounded-2xl pt-11 pb-3.5 px-1.5 text-center flex flex-col justify-between items-center shadow-lg h-[175px] active:scale-95 transition-transform duration-200 cursor-pointer">
+                    <div onclick="showItem('samyang')" class="relative bg-brandBrownCard text-white rounded-2xl pt-12 pb-4 px-1.5 text-center flex flex-col justify-between items-center shadow-lg h-[215px] active:scale-95 transition-transform duration-200 cursor-pointer">
                         <div onclick="event.stopPropagation(); openDetailModal('samyang')" class="absolute -top-9 left-1/2 transform -translate-x-1/2 w-[72px] h-[72px] rounded-full border-[3px] border-brandBeige shadow-xl overflow-hidden bg-brandCream cursor-zoom-in z-20 flex items-center justify-center">
                             <img src="img/samyang.png" alt="Samyang Ngap" class="w-full h-full object-contain scale-110 pointer-events-none" onerror="handleImgError(this)" />
                             <div class="hidden w-full h-full border-2 border-dashed border-brandMaroon/50 flex-col items-center justify-center p-1 text-center bg-brandCream text-brandMaroon pointer-events-none">
@@ -72,12 +72,12 @@
                                 <span class="text-[8px] font-bold leading-tight mt-0.5">Samyang</span>
                             </div>
                         </div>
-                        <h3 class="font-bold text-[11px] leading-snug mt-1 text-brandCream/95">Samyang Ngap with Fried Egg</h3>
+                        <h3 class="font-bold text-[11px] leading-snug mt-2 text-brandCream/95">Samyang Ngap with Fried Egg</h3>
                         <div class="mt-auto"><span class="font-extrabold text-sm text-brandCream tracking-wide">RM8</span></div>
                     </div>
 
                     <!-- CARD 2: Hirup Peach Tea Sparkling -->
-                    <div onclick="showItem('peach')" class="relative bg-brandMaroonCard text-white rounded-2xl pt-11 pb-3.5 px-1.5 text-center flex flex-col justify-between items-center shadow-lg h-[175px] active:scale-95 transition-transform duration-200 cursor-pointer">
+                    <div onclick="showItem('peach')" class="relative bg-brandMaroonCard text-white rounded-2xl pt-12 pb-4 px-1.5 text-center flex flex-col justify-between items-center shadow-lg h-[215px] active:scale-95 transition-transform duration-200 cursor-pointer">
                         <div onclick="event.stopPropagation(); openDetailModal('peach')" class="absolute -top-11 left-1/2 transform -translate-x-1/2 w-[68px] h-[90px] cursor-zoom-in z-20">
                             <img src="img/peach.png" alt="Hirup Peach Tea Sparkling" class="w-full h-full object-contain filter drop-shadow-lg pointer-events-none" onerror="handleImgError(this)" />
                             <div class="hidden w-full h-full rounded-xl border-2 border-dashed border-brandBeige/60 flex-col items-center justify-center p-1 text-center bg-brandCream text-brandMaroon shadow-md pointer-events-none">
@@ -85,12 +85,12 @@
                                 <span class="text-[8px] font-bold leading-tight mt-0.5">Peach Tea</span>
                             </div>
                         </div>
-                        <h3 class="font-bold text-[11px] leading-snug mt-1 text-brandCream/95">Hirup Peach Tea Sparkling</h3>
+                        <h3 class="font-bold text-[11px] leading-snug mt-2 text-brandCream/95">Hirup Peach Tea Sparkling</h3>
                         <div class="mt-auto"><span class="font-extrabold text-sm text-brandCream tracking-wide">RM3</span></div>
                     </div>
 
                     <!-- CARD 3: Hirup Berry Sparkling -->
-                    <div onclick="showItem('berry')" class="relative bg-brandBrownCard text-white rounded-2xl pt-11 pb-3.5 px-1.5 text-center flex flex-col justify-between items-center shadow-lg h-[175px] active:scale-95 transition-transform duration-200 cursor-pointer">
+                    <div onclick="showItem('berry')" class="relative bg-brandBrownCard text-white rounded-2xl pt-12 pb-4 px-1.5 text-center flex flex-col justify-between items-center shadow-lg h-[215px] active:scale-95 transition-transform duration-200 cursor-pointer">
                         <div onclick="event.stopPropagation(); openDetailModal('berry')" class="absolute -top-11 left-1/2 transform -translate-x-1/2 w-[68px] h-[90px] cursor-zoom-in z-20">
                             <img src="img/berry.png" alt="Hirup Berry Sparkling" class="w-full h-full object-contain filter drop-shadow-lg pointer-events-none" onerror="handleImgError(this)" />
                             <div class="hidden w-full h-full rounded-xl border-2 border-dashed border-brandBeige/60 flex-col items-center justify-center p-1 text-center bg-brandCream text-brandMaroon shadow-md pointer-events-none">
@@ -98,7 +98,7 @@
                                 <span class="text-[8px] font-bold leading-tight mt-0.5">Berry</span>
                             </div>
                         </div>
-                        <h3 class="font-bold text-[11px] leading-snug mt-1 text-brandCream/95">Hirup Berry Sparkling</h3>
+                        <h3 class="font-bold text-[11px] leading-snug mt-2 text-brandCream/95">Hirup Berry Sparkling</h3>
                         <div class="mt-auto"><span class="font-extrabold text-sm text-brandCream tracking-wide">RM3</span></div>
                     </div>
 
@@ -151,50 +151,49 @@
         </div>
 
         <!-- Bottom Navigation -->
-        <nav class="bottom-nav">
-            <a href="index.html" class="nav-btn">
-                <img src="image/logo.png" alt="Hirup & Ngap Logo" class="nav-logo">
-            </a>
-            
-            <div class="nav-links">
-                <!-- Menu Icon -->
-                <a href="menu.html" class="nav-btn active">
-                    <div class="icon-wrapper">
-                        <svg viewBox="0 0 24 24" class="nav-svg">
-                            <rect x="3.5" y="3.5" width="7" height="7" rx="1.2"></rect>
-                            <rect x="13.5" y="3.5" width="7" height="7" rx="1.2"></rect>
-                            <rect x="3.5" y="13.5" width="7" height="7" rx="1.2"></rect>
-                            <rect x="13.5" y="13.5" width="7" height="7" rx="1.2"></rect>
-                        </svg>
-                    </div>
-                    <span>Menu</span>
-                </a>
-
-                <!-- Home Icon -->
-                <a href="about us.html" class="nav-btn">
-                    <div class="icon-wrapper">
-                        <svg viewBox="0 0 24 24" class="nav-svg">
-                            <path d="M3 10.5L12 3L21 10.5"></path>
-                            <path d="M5.5 8.5V19.5H18.5V8.5"></path>
-                            <path d="M9.5 19.5V13.5H14.5V19.5"></path>
-                        </svg>
-                    </div>
-                    <span>Home</span>
-                </a>
-
-                <!-- Location Icon -->
-                <a href="location.html" class="nav-btn">
-                    <div class="icon-wrapper">
-                        <svg viewBox="0 0 24 24" class="nav-svg">
-                            <path d="M12 21.5C12 21.5 18.5 14.8 18.5 9.5C18.5 5.91 15.59 3 12 3C8.41 3 5.5 5.91 5.5 9.5C5.5 14.8 12 21.5 12 21.5Z"></path>
-                            <circle cx="12" cy="9.5" r="2.6"></circle>
-                        </svg>
-                    </div>
-                    <span>Location</span>
-                </a>
+<nav class="bottom-nav">
+    <a href="index.html" class="nav-btn">
+        <img src="image/logo.png" alt="Hirup & Ngap Logo" class="nav-logo">
+    </a>
+    
+    <div class="nav-links">
+        <!-- Menu Icon -->
+        <a href="menu.html" class="nav-btn active">
+            <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24" class="nav-svg">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.2"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.2"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.2"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.2"></rect>
+                </svg>
             </div>
-        </nav>
+            <span>Menu</span>
+        </a>
 
+        <!-- Home Icon -->
+        <a href="about us.html" class="nav-btn">
+            <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24" class="nav-svg">
+                    <path d="M3 10.5L12 3L21 10.5"></path>
+                    <path d="M5.5 8.5V19.5H18.5V8.5"></path>
+                    <path d="M9.5 19.5V13.5H14.5V19.5"></path>
+                </svg>
+            </div>
+            <span>Home</span>
+        </a>
+
+        <!-- Location Icon -->
+        <a href="location.html" class="nav-btn">
+            <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24" class="nav-svg">
+                    <path d="M12 21.5C12 21.5 18.5 14.8 18.5 9.5C18.5 5.91 15.59 3 12 3C8.41 3 5.5 5.91 5.5 9.5C5.5 14.8 12 21.5 12 21.5Z"></path>
+                    <circle cx="12" cy="9.5" r="2.6"></circle>
+                </svg>
+            </div>
+            <span>Location</span>
+        </a>
+    </div>
+</nav>
         <!-- ================= FULL DETAIL POPUP MODAL ================= -->
         <div id="detail-modal" style="display: none;" class="absolute inset-0 bg-black/80 z-50 flex items-center justify-center p-3" onclick="closeDetailModal()">
             <div id="detail-modal-card" class="relative w-full max-w-[365px] bg-brandBrownCard text-brandCream rounded-[28px] p-4 shadow-2xl border-[3px] border-brandBeige max-h-[92%] overflow-y-auto" onclick="event.stopPropagation()">

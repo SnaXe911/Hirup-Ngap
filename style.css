@@ -41,67 +41,13 @@ html, body {
     }
 }
 
-/* Scrollable Content Inside Phone */
-.content-area {
-    flex: 1;
-    overflow-y: auto;
-    padding: 15px;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.content-area::-webkit-scrollbar {
-    display: none;
-}
-
-/* Header Slideshow */
-.header-section {
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.slideshow-wrapper {
-    width: 100%;
-    height: 22vh;
-    min-height: 150px;
-    max-height: 200px;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-/* Location Cards */
-.cards-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    padding-bottom: 10px;
-}
-
-.location-card {
-    border-radius: 15px;
-    padding: 12px;
-    width: 100%;
-}
-
-.wa-btn {
-    width: 42px;
-    height: 42px;
-}
-
-.card-thumbnail {
-    width: 92px;
-    height: 92px;
-    flex-shrink: 0;
-}
-
 /* Bottom Navigation Bar */
 .bottom-nav {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 16px calc(12px + env(safe-area-inset-bottom)) 16px;
+    padding: 10px 16px calc(12px + env(safe-area-inset-bottom)) 28px;
     background-color: var(--nav-bg);
     position: relative;
     flex-shrink: 0;
@@ -166,20 +112,4 @@ html, body {
 .nav-btn:hover .icon-wrapper,
 .nav-btn.active .icon-wrapper {
     transform: translateY(-2px);
-}
-
-/* Popup entrance animation */
-@keyframes modalPop {
-    from {
-        opacity: 0;
-        transform: scale(0.92);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-#detail-modal-card {
-    animation: modalPop 0.2s ease-out;
 }
