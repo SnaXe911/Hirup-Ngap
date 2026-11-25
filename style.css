@@ -47,7 +47,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 16px calc(12px + env(safe-area-inset-bottom)) 28px;
+    padding: 10px 39px calc(9px + env(safe-area-inset-bottom)) 16px;
     background-color: var(--nav-bg);
     position: relative;
     flex-shrink: 0;
@@ -57,7 +57,7 @@ html, body {
 .nav-logo {
     position: absolute;
     left: 12px;
-    top: 50%;
+    top: 51%;
     transform: translateY(-50%);
     width: 68px;
     height: 68px;
